@@ -11,5 +11,6 @@ Commands Added:
 - paste
 - DbTest
 - DataBank (WiP)
+- clear
   **Not Finished**               
 ----------------------------------------------
