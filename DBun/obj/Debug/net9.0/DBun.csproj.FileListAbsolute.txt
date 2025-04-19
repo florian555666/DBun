@@ -12,3 +12,4 @@
 /Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.pdb
 /Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.genruntimeconfig.cache
 /Users/florian/DBun/DBun/obj/Debug/net9.0/ref/DBun.dll
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.sourcelink.json
