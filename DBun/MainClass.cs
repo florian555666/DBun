@@ -76,7 +76,6 @@ namespace DBun
                     }
                     else
                     {
-                    // Copy the first character of EingabeString1 to resultBuffer
                     Environment.Exit(0);
                     }
                     goto case "copy1"; 
