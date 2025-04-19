@@ -15,7 +15,7 @@ public class DataBank
 
     public static List<ArrayList> Hosen = new List<ArrayList>();
     
-/*
+
     public static void Hose(List<ArrayList> Hosen)
     {
 
@@ -35,7 +35,7 @@ public class DataBank
             }   
         }
     }
-*/
+
 
     public static void DB(List<ArrayList> Kategorie)
     {
