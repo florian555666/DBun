@@ -1,0 +1,14 @@
+/Users/florian/DBun/DBun/bin/Debug/net9.0/DBun
+/Users/florian/DBun/DBun/bin/Debug/net9.0/DBun.deps.json
+/Users/florian/DBun/DBun/bin/Debug/net9.0/DBun.runtimeconfig.json
+/Users/florian/DBun/DBun/bin/Debug/net9.0/DBun.dll
+/Users/florian/DBun/DBun/bin/Debug/net9.0/DBun.pdb
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.GeneratedMSBuildEditorConfig.editorconfig
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.AssemblyInfoInputs.cache
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.AssemblyInfo.cs
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.csproj.CoreCompileInputs.cache
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.dll
+/Users/florian/DBun/DBun/obj/Debug/net9.0/refint/DBun.dll
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.pdb
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.genruntimeconfig.cache
+/Users/florian/DBun/DBun/obj/Debug/net9.0/ref/DBun.dll
