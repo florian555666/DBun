@@ -23,6 +23,9 @@ namespace DBun
             
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
+                    case "makefile":
+                    Textfilemaker.Textfilemake();
+                    break;
                     case "DBTest":
                     DataBank.DB(Kategorie);
                     break;
