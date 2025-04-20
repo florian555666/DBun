@@ -1,10 +1,42 @@
+using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
+namespace DBun{
 public class Textfilemaker
 {
+    
+    
+    
     public static void Textfilemake()
     {
-        string path = "C:\\Users\\Public\\Documents\\DBun\\DBun.txt";
-        string[] lines = { "First line", "Second line", "Third line" };
+        System.Console.WriteLine("Please Enter a Path:");
+        Console.Write("Please Enter a Path: -->" +  "@path");
+        //string path = @"C:\Users\YourUsername\Documents\example.txt";
+        try{
+        string path = Console.ReadLine() ?? "";
+        bool isValid = path.Length != 0;
+        System.Console.WriteLine("Please Enter a Name for the File");
+        string nameofFile = Console.ReadLine()?? " ";
+
+        if (isValid == true){
+        string[] lines = { "First line", "Second line", "Third line" }; 
         System.IO.File.WriteAllLines(path, lines);
         Console.WriteLine("Text file created successfully.");
+        
+        }
+        }
+        catch{
+            System.Console.WriteLine("Path not Valid");
+        }
+        }
+    public static void createfiles()
+    {
+         // File? file = new File == nameof "Hi";
+
+
+
+
+    }
+    
     }
 }
+
