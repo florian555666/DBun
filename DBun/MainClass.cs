@@ -3,10 +3,25 @@ using System.Data;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+///summary
+///MainClass:
+///Set UserInput
+/// Add some UserCommands:
+/// + makefile
+/// + DBTest
+/// + DatenBank
+/// + help
+/// + exit
+/// + clear
+/// + copy
+/// + paste
+///Create a DataBank with items
+///
+///summary
 namespace DBun
 {
 
-    internal class MainClass : DataBank
+    internal class MainClass : DataBank 
     {
         public static void Main(string[] args)
         {
@@ -107,9 +122,18 @@ namespace DBun
                     
                     break;
 
+                    case "c":
+                    WorkInProgress();
+                    break;
+                    
+
                     
                 }
             }
+        }
+        public static void WorkInProgress()
+        {
+            Calculator.Evaluate();
         }
     }
 }
