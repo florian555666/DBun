@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Data;
+using System.Diagnostics;
+using System.Dynamic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -21,10 +23,28 @@ using System.Text;
 namespace DBun
 {
 
-    internal class MainClass : DataBank 
+    public class MainClass : DataBank 
     {
+        public static void hello()
+        {
+            // Check if a debugger is attached
+            if (Debugger.IsAttached)
+            {
+                Console.WriteLine("Debugger is attached.");
+            }
+            else
+            {
+                Console.WriteLine("No debugger is attached.");
+            }
+
+            // Optionally, launch a debugger
+            Debugger.Launch(); // This will prompt to attach a debugger if none is attached
+            
+        }
+
         public static void Main(string[] args)
         {
+            
             string EingabeString;            
             string EingabeString1;
             int[] i = new int[10];
@@ -38,6 +58,9 @@ namespace DBun
             
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
+                    case "mk":
+                    Textfilemaker.Createfiles();
+                    break;
                     case "makefile":
                     Textfilemaker.Textfilemake();
                     break;
@@ -64,7 +87,8 @@ namespace DBun
                     Environment.Exit(0);
                     break;
                     case "clear":
-                    Console.Clear();
+                    System.Console.Clear();
+                    
                     break;
                     case "copy": 
                     Console.WriteLine("Write a string to copy the first character:");
@@ -116,15 +140,23 @@ namespace DBun
                         
                     break;
 
-                    default:
-                    Console.WriteLine("Please use help");
-
-                    
-                    break;
-
                     case "c":
                     WorkInProgress();
                     break;
+
+                    case "sound":
+                    Countdown.Sound();
+                    break;
+                    default:
+                    Console.WriteLine("Please use help");
+                    break;
+
+                    case "test":
+                    Countdown.start();
+                    break;
+
+                    
+                    
                     
 
                     
@@ -133,7 +165,27 @@ namespace DBun
         }
         public static void WorkInProgress()
         {
-            Calculator.Evaluate();
+            //Calculator.Evaluate();
+            for(int i = 0; i < 5; i++)
+            {
+                       System.Console.WriteLine("Hello World");     
+
+
+
+
+            }
+            while (true)
+            {
+                
+                int i = Convert.ToInt32(Console.ReadLine());
+                switch (i)
+                {
+                    case 1:
+                Console.WriteLine("Hello World");
+                System.Threading.Thread.Sleep(1000); // Sleep for 1 second
+                break;
+                }
+            }
         }
     }
 }
