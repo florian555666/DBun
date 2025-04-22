@@ -31,23 +31,25 @@ namespace DBun
             if (Debugger.IsAttached)
             {
                 Console.WriteLine("Debugger is attached.");
+               
             }
             else
             {
                 Console.WriteLine("No debugger is attached.");
+                // Optionally, launch a debugger
+                Debugger.Launch(); // This will prompt to attach a debugger if none is attached
             }
 
-            // Optionally, launch a debugger
-            Debugger.Launch(); // This will prompt to attach a debugger if none is attached
             
         }
 
         public static void Main(string[] args)
         {
-            MainClass.run();
-
+            //hello();
+            //run();
+            Messages.ExceptionCatcher();
         }
-        public static void run()
+        public static void Run()
         {
             string EingabeString;            
             char[] resultBuffer = new char[1];
@@ -70,18 +72,8 @@ namespace DBun
                     case "DBTest":
                     DataBank.DB(Kategorie);
                     break;
-                    case "DatenBank":
-                    Console.WriteLine(Kategorie);
-                    break;
                     case "help":
-                    Console.WriteLine("***Commandslist***");
-                    Console.WriteLine("DatenBank");
-                    Console.WriteLine("exit");
-                    Console.WriteLine("DBTest");
-                    Console.WriteLine("help");
-                    Console.WriteLine("copy");
-                    Console.WriteLine("paste");
-                    Console.WriteLine("******************");
+                    Messages.Help();
                     break;
                     case "exit":
                     Environment.Exit(0);
@@ -90,46 +82,28 @@ namespace DBun
                     System.Console.Clear();
                     break;
                     case "copy": 
-                    CopyMMethod.Copy( resultBuffer);
+                    CopyMMethod.Copy();
                     break;
                     case "paste":
-                    CopyMMethod.Paste(ref resultBuffer);
-                    break;
-                    case "WIP":
-                    WorkInProgress();
+                    CopyMMethod.Paste();
                     break;
                     case "sound":
-                    Countdown.Sound();
+                    Sounds.Sound();
                     break;
+                    case "countdown":
+                    Countdown.Start();
+                    break;
+                    case "calc":
+                    Calculator.Evaluate();
+                    break;
+                    case ".":      
+                    goto case "help"; 
                     default:
                     Console.WriteLine("Please use help");
                     break;
-                    case "test":
-                    Countdown.Start();
-                    break;
-                    case ".":      
-                    goto case "help";  
                 }
             }
         }
-        public static void WorkInProgress()
-        {
-            //Calculator.Evaluate();
-            for(int i = 0; i < 5; i++)
-            {
-                System.Console.WriteLine("Hello World");     
-            }
-            while (true)
-            {  
-                int i = Convert.ToInt32(Console.ReadLine());
-                switch (i)
-                {
-                    case 1:
-                    Console.WriteLine("Hello World");
-                    System.Threading.Thread.Sleep(1000); // Sleep for 1 second
-                    break;
-                }
-            }
-        }
+
     }
 }

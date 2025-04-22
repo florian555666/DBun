@@ -1,3 +1,5 @@
+using DBun;
+
 public class Filemaker
 {
         public static void Textfilemaketest()
@@ -20,39 +22,41 @@ public class Filemaker
                     Console.WriteLine("Text file created successfully.");
                 }
             }
-            catch(Exception e)
+            catch
             {
 
-                System.Console.WriteLine(e.Message);
+                Messages.ExceptionPrinter();
             }
         }
         public  static void Createfiles()
         {
             try
             {
-                string pathname = "/Users/florian/DBun/FileTests/" ?? "";
-                if (File.Exists(pathname))
+                System.Console.WriteLine("Please Enter a Name for the File");
+                string name = Console.ReadLine() ?? "";
+                string pathname = "/Users/florian/DBun/FileTests/" + name;
+                if (File.Exists(pathname + name ))
                 {
 
                     System.Console.WriteLine("File already exists.");
                 }
                 else
                 {
-                    System.Console.WriteLine("Please Enter a Name for the File");
-                    string FileName = Console.ReadLine() ?? "";
-                    string pathnameUInput = pathname + FileName;
-                    System.IO.File.Create(pathnameUInput , 1024, FileOptions.None);
+                    
+                    System.IO.File.Create(pathname , 1024, FileOptions.None);
                     System.Console.WriteLine("File created successfully.");
 
                 }
             }
-            catch(Exception ex)
+            catch
             {
-                System.Console.WriteLine(ex.Message);
+                Messages.ExceptionPrinter();
             }
         }
         public static void Deletefile()
         {
+            try
+            {
             System.Console.WriteLine("Please Enter a Name for the File");
             string FileName = Console.ReadLine() ?? "";
             string pathnameUInput = "/Users/florian/DBun/FileTests/" + FileName;
@@ -65,6 +69,11 @@ public class Filemaker
             else
             {
                 System.Console.WriteLine("File not found.");
+            }
+            }
+            catch
+            {
+                Messages.ExceptionPrinter();
             }
         }
 }

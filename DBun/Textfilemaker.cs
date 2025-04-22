@@ -30,7 +30,7 @@ namespace DBun
                         System.Console.WriteLine("Use create to create a file + Path");
                         if(name == "exit")
                         {
-                            MainClass.run();
+                            MainClass.Run();
                             break;
                         }
                         else if (name == "search")
@@ -108,7 +108,7 @@ namespace DBun
                         System.Console.WriteLine("Use .. to open the FileBrowser");
                         if( name == "exit")
                         {
-                            MainClass.run();
+                            MainClass.Run();
                             break;
                         }
                         else if (name == "..")
@@ -131,7 +131,7 @@ namespace DBun
                     {
                         if( name == "exit")
                         {
-                            MainClass.run();
+                            MainClass.Run();
                             break;
                         }
                         else if (name == "..")
