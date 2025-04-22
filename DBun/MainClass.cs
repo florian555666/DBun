@@ -44,18 +44,17 @@ namespace DBun
 
         public static void Main(string[] args)
         {
-            
-            string EingabeString;            
-            string EingabeString1;
-            int[] i = new int[10];
+            MainClass.run();
 
+        }
+        public static void run(){
+            string EingabeString;            
             char[] resultBuffer = new char[1];
             bool level = true;
- 
             Console.WriteLine("Use the command 'help' to see the commands.");
             while (level == true)
             {
-            
+                System.Console.WriteLine("Use . to get back to the main menu.");
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
                     case "mk":
@@ -67,11 +66,9 @@ namespace DBun
                     case "DBTest":
                     DataBank.DB(Kategorie);
                     break;
-
                     case "DatenBank":
                     Console.WriteLine(Kategorie);
                     break;
-
                     case "help":
                     Console.WriteLine("***Commandslist***");
                     Console.WriteLine("DatenBank");
@@ -82,84 +79,38 @@ namespace DBun
                     Console.WriteLine("paste");
                     Console.WriteLine("******************");
                     break;
-
                     case "exit":
                     Environment.Exit(0);
                     break;
                     case "clear":
                     System.Console.Clear();
-                    
                     break;
                     case "copy": 
-                    Console.WriteLine("Write a string to copy the first character:");
-                    System.Console.WriteLine("Write exit to exit the program.");
-                        
-                    // Check if EingabeString1 is not empty 
-                    if (string.IsNullOrEmpty(EingabeString1 = Console.ReadLine() ?? ""))
-                    {
-                        
-                    Console.WriteLine("EingabeString1 is empty. Please enter a string:");
-                    // Read a new string from the console
-                        
-                    resultBuffer[0] = EingabeString1[0];
-                    Console.WriteLine($"First character copied: {resultBuffer[0]}");
-                    }
-                    if (EingabeString1 == "exit")                       {
-                    goto case "help";
-                    }
-
-                        
-                    // Check if EingabeString1 has at least one character
-                    else if (EingabeString1.Length > 0)
-                    {
-                    // Copy the first character of EingabeString1 to resultBuffer
-                    resultBuffer[0] = EingabeString1[0];
-                    Console.WriteLine($"First character copied: {resultBuffer[0]}");
-                    }
-                    else
-                    {
-                    Environment.Exit(0);
-                    }
-                    goto case "copy1"; 
-                     // Paste the copied character
-                    case "copy1":
-                
-                    System.Console.WriteLine("Use the paste command to paste the copied character.");
+                    CopyMMethod.Copy( resultBuffer);
                     break;
                     case "paste":
-                    
-                    Console.WriteLine("Try to paste the copied character...");
-                    if (resultBuffer[0] == '\0')
-                    {
-                    Console.WriteLine("No character copied. Please use the copy command first.");
-                    }
-                    else
-                    {
-                    Console.WriteLine($"Pasted character: {resultBuffer[0]}");
-                    }
-                        
+                    CopyMMethod.Paste(ref resultBuffer);
                     break;
-
-                    case "c":
+                    case "WIP":
                     WorkInProgress();
                     break;
-
                     case "sound":
                     Countdown.Sound();
                     break;
                     default:
                     Console.WriteLine("Please use help");
                     break;
-
                     case "test":
                     Countdown.start();
                     break;
-
-                    
-                    
-                    
-
-                    
+                    case "delete":
+                    Textfilemaker.Deletefile();
+                    break;
+                    case "filebrowser":
+                    Textfilemaker.FileBrowser();
+                    break;
+                    case ".":      
+                    goto case "help";  
                 }
             }
         }
@@ -168,22 +119,17 @@ namespace DBun
             //Calculator.Evaluate();
             for(int i = 0; i < 5; i++)
             {
-                       System.Console.WriteLine("Hello World");     
-
-
-
-
+                System.Console.WriteLine("Hello World");     
             }
             while (true)
-            {
-                
+            {  
                 int i = Convert.ToInt32(Console.ReadLine());
                 switch (i)
                 {
                     case 1:
-                Console.WriteLine("Hello World");
-                System.Threading.Thread.Sleep(1000); // Sleep for 1 second
-                break;
+                    Console.WriteLine("Hello World");
+                    System.Threading.Thread.Sleep(1000); // Sleep for 1 second
+                    break;
                 }
             }
         }
