@@ -4,8 +4,7 @@ public class CopyMMethod
 {
     static char[] resultBuffer = new char[1];
     public static void Copy()
-    {
-        
+    {        
         Console.WriteLine("Write a string to copy the first character:");
         System.Console.WriteLine("Write exit to exit the process.");
         string EingabeString1 = Console.ReadLine() ?? "";
@@ -30,18 +29,16 @@ public class CopyMMethod
             Console.WriteLine("No character copied. Please use the copy command first.");
         }
     }
-        public static void Paste()
+    public static void Paste()
+    {
+        Console.WriteLine("Try to paste the copied character...");
+        if (resultBuffer[0] == '\0')
         {
-            Console.WriteLine("Try to paste the copied character...");
-            if (resultBuffer[0] == '\0')
-            {
-                Console.WriteLine("No character copied. Please use the copy command first.");
-            }
-            else if (resultBuffer[0] != '\0')
-            {
-                Console.WriteLine($"Pasted character: {resultBuffer[0]}");
-                
-            }
-        }         
-
+            Console.WriteLine("No character copied. Please use the copy command first.");
+        }
+        else if (resultBuffer[0] != '\0')
+        {
+            Console.WriteLine($"Pasted character: {resultBuffer[0]}");                
+        }
+    }         
 }

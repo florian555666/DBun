@@ -1,7 +1,6 @@
 using System;
 using System.IO.Pipelines;
 using Microsoft.Win32.SafeHandles;
-
 namespace DBun
 {
     public class Calculator 
@@ -17,8 +16,7 @@ namespace DBun
                 System.Console.WriteLine("Please enter a second value");
                 bool isValid2 = double.TryParse(Console.ReadLine()?? "", out number2);
                 if (isValid == true && isValid2 == true)
-                {
-                   
+                {                   
                     Console.WriteLine("Please enter an operator (+, -, *, /)");
                     string? op = Console.ReadLine();
                     double resultplus = number + number2;

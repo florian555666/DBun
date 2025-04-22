@@ -1,14 +1,13 @@
 using DBun;
-
 public class Filemaker
 {
-        public static void Textfilemaketest()
+    public static void Textfilemaketest()
+    {
+        System.Console.WriteLine("Please Enter a Path:");
+        Console.Write("Please Enter a Path: -->" +  "@path");
+        //string path = @"C:\Users\YourUsername\Documents\example.txt";
+        try
         {
-            System.Console.WriteLine("Please Enter a Path:");
-            Console.Write("Please Enter a Path: -->" +  "@path");
-            //string path = @"C:\Users\YourUsername\Documents\example.txt";
-            try
-            {
                 string path = Console.ReadLine() ?? "";
                 bool isValid = path.Length != 0;
                 System.Console.WriteLine("Please Enter a Name for the File");
@@ -21,42 +20,38 @@ public class Filemaker
                     System.IO.File.WriteAllLines(path, lines);
                     Console.WriteLine("Text file created successfully.");
                 }
-            }
-            catch
+        }
+        catch
+        {
+            Messages.ExceptionPrinter();
+        }
+    }
+    public  static void Createfiles()
+    {
+        try
+        {
+            System.Console.WriteLine("Please Enter a Name for the File");
+            string name = Console.ReadLine() ?? "";
+            string pathname = "/Users/florian/DBun/FileTests/" + name;
+            if (File.Exists(pathname + name ))
             {
-
-                Messages.ExceptionPrinter();
+                System.Console.WriteLine("File already exists.");
+            }
+            else
+            {
+                System.IO.File.Create(pathname , 1024, FileOptions.None);
+                System.Console.WriteLine("File created successfully.");
             }
         }
-        public  static void Createfiles()
+        catch
         {
-            try
-            {
-                System.Console.WriteLine("Please Enter a Name for the File");
-                string name = Console.ReadLine() ?? "";
-                string pathname = "/Users/florian/DBun/FileTests/" + name;
-                if (File.Exists(pathname + name ))
-                {
-
-                    System.Console.WriteLine("File already exists.");
-                }
-                else
-                {
-                    
-                    System.IO.File.Create(pathname , 1024, FileOptions.None);
-                    System.Console.WriteLine("File created successfully.");
-
-                }
-            }
-            catch
-            {
-                Messages.ExceptionPrinter();
-            }
+            Messages.ExceptionPrinter();
         }
-        public static void Deletefile()
+    }
+    public static void Deletefile()
+    {
+        try
         {
-            try
-            {
             System.Console.WriteLine("Please Enter a Name for the File");
             string FileName = Console.ReadLine() ?? "";
             string pathnameUInput = "/Users/florian/DBun/FileTests/" + FileName;
@@ -70,11 +65,11 @@ public class Filemaker
             {
                 System.Console.WriteLine("File not found.");
             }
-            }
-            catch
-            {
-                Messages.ExceptionPrinter();
-            }
         }
+        catch
+        {
+            Messages.ExceptionPrinter();
+        }
+    }
 }
          

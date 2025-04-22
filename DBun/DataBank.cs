@@ -5,21 +5,14 @@ using System.Diagnostics;
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
 using Microsoft.VisualBasic;
-
 namespace DBun;
-
 public class DataBank
 {
     public static int Test{get; set;}
     public static List<ArrayList> Kategorie = new List<ArrayList>();
-
     public static List<ArrayList> Hosen = new List<ArrayList>();
-    
-
     public static void Hose(List<ArrayList> Hosen)
     {
-
-
         ArrayList HosenName = ["Jeans"];
         ArrayList HosenName2 = ["Hello"];
         Hosen.Add(HosenName);
@@ -29,40 +22,25 @@ public class DataBank
         {    
             foreach(var item in list)
             {
-                System.Console.WriteLine(item);
-                
-               
+                System.Console.WriteLine(item);                   
             }   
         }
     }
-
-
     public static void DB(List<ArrayList> Kategorie)
     {
-
         //Kategorie 
         ArrayList KatHosen = ["Hosen"];
         ArrayList KatShirts = ["Shirts"];
-        ArrayList KatSchmuck = ["Schmuck"];
-     
+        ArrayList KatSchmuck = ["Schmuck"]; 
         Kategorie.Add(KatHosen);
         Kategorie.Add(KatShirts);
-        Kategorie.Add(KatSchmuck);
- 
+        Kategorie.Add(KatSchmuck); 
         foreach (var list in Kategorie)
-        {
-           
-            
+        {       
             foreach(var item in list)
             {
                 Console.WriteLine(item);
-
-            
             }
         }
-    }
-
-
-    
+    }    
 }
-

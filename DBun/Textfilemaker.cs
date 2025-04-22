@@ -16,13 +16,11 @@ namespace DBun
             string Filename;
             //bool OperatingSystem = OperatingSystem.IsMacOS() || OperatingSystem.IsLinux() || OperatingSystem.IsWindows();
             while (isValid == true)
-            {
-                
+            {                
                 try
                 {
                     if (OperatingSystem.IsMacOS())
-                    {
-                        
+                    {                        
                         System.Console.WriteLine("Use .. to open the FileBrowser");
                         System.Console.WriteLine("Use exit to get back to the main menu");
                         System.Console.WriteLine("Use search + Path to open the file");
@@ -98,11 +96,8 @@ namespace DBun
                             System.Console.WriteLine("error");
                             break;
                         }
-
-                        
                        break;
-                    }
-                    
+                    }                    
                     if (OperatingSystem.IsLinux())
                     {
                         System.Console.WriteLine("Use .. to open the FileBrowser");
@@ -154,13 +149,11 @@ namespace DBun
                 }
                 catch(Exception e)
                 {
-                    System.Console.WriteLine(e.Message);
-                 
+                    System.Console.WriteLine(e.Message);                 
                     break;
                 }     
             }
         }
-
     }
 }
 

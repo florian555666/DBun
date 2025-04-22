@@ -22,7 +22,6 @@ using System.Text;
 ///summary
 namespace DBun
 {
-
     public class MainClass : DataBank 
     {
         public static void hello()
@@ -31,18 +30,14 @@ namespace DBun
             if (Debugger.IsAttached)
             {
                 Console.WriteLine("Debugger is attached.");
-               
             }
             else
             {
                 Console.WriteLine("No debugger is attached.");
                 // Optionally, launch a debugger
                 Debugger.Launch(); // This will prompt to attach a debugger if none is attached
-            }
-
-            
+            }            
         }
-
         public static void Main(string[] args)
         {
             //hello();
@@ -104,6 +99,5 @@ namespace DBun
                 }
             }
         }
-
     }
 }
