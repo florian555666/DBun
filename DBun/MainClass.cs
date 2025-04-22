@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Data;
+using System.Diagnostics;
+using System.Dynamic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -21,119 +23,87 @@ using System.Text;
 namespace DBun
 {
 
-    internal class MainClass : DataBank 
+    public class MainClass : DataBank 
     {
+        public static void hello()
+        {
+            // Check if a debugger is attached
+            if (Debugger.IsAttached)
+            {
+                Console.WriteLine("Debugger is attached.");
+               
+            }
+            else
+            {
+                Console.WriteLine("No debugger is attached.");
+                // Optionally, launch a debugger
+                Debugger.Launch(); // This will prompt to attach a debugger if none is attached
+            }
+
+            
+        }
+
         public static void Main(string[] args)
         {
+            //hello();
+            //run();
+            Messages.ExceptionCatcher();
+        }
+        public static void Run()
+        {
             string EingabeString;            
-            string EingabeString1;
-            int[] i = new int[10];
-
             char[] resultBuffer = new char[1];
             bool level = true;
- 
             Console.WriteLine("Use the command 'help' to see the commands.");
             while (level == true)
             {
-            
+                System.Console.WriteLine("Use . to get back to the main menu.");
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
-                    case "makefile":
-                    Textfilemaker.Textfilemake();
+                    case "create":
+                    Filemaker.Createfiles();
+                    break;
+                    case "delete":
+                    Filemaker.Deletefile();
+                    break;
+                    case "Browser":
+                    Textfilemaker.FileBrowser();
                     break;
                     case "DBTest":
                     DataBank.DB(Kategorie);
                     break;
-
-                    case "DatenBank":
-                    Console.WriteLine(Kategorie);
-                    break;
-
                     case "help":
-                    Console.WriteLine("***Commandslist***");
-                    Console.WriteLine("DatenBank");
-                    Console.WriteLine("exit");
-                    Console.WriteLine("DBTest");
-                    Console.WriteLine("help");
-                    Console.WriteLine("copy");
-                    Console.WriteLine("paste");
-                    Console.WriteLine("******************");
+                    Messages.Help();
                     break;
-
                     case "exit":
                     Environment.Exit(0);
                     break;
                     case "clear":
-                    Console.Clear();
+                    System.Console.Clear();
                     break;
                     case "copy": 
-                    Console.WriteLine("Write a string to copy the first character:");
-                    System.Console.WriteLine("Write exit to exit the program.");
-                        
-                    // Check if EingabeString1 is not empty 
-                    if (string.IsNullOrEmpty(EingabeString1 = Console.ReadLine() ?? ""))
-                    {
-                        
-                    Console.WriteLine("EingabeString1 is empty. Please enter a string:");
-                    // Read a new string from the console
-                        
-                    resultBuffer[0] = EingabeString1[0];
-                    Console.WriteLine($"First character copied: {resultBuffer[0]}");
-                    }
-                    if (EingabeString1 == "exit")                       {
-                    goto case "help";
-                    }
-
-                        
-                    // Check if EingabeString1 has at least one character
-                    else if (EingabeString1.Length > 0)
-                    {
-                    // Copy the first character of EingabeString1 to resultBuffer
-                    resultBuffer[0] = EingabeString1[0];
-                    Console.WriteLine($"First character copied: {resultBuffer[0]}");
-                    }
-                    else
-                    {
-                    Environment.Exit(0);
-                    }
-                    goto case "copy1"; 
-                     // Paste the copied character
-                    case "copy1":
-                
-                    System.Console.WriteLine("Use the paste command to paste the copied character.");
+                    CopyMMethod.Copy();
                     break;
                     case "paste":
-                    
-                    Console.WriteLine("Try to paste the copied character...");
-                    if (resultBuffer[0] == '\0')
-                    {
-                    Console.WriteLine("No character copied. Please use the copy command first.");
-                    }
-                    else
-                    {
-                    Console.WriteLine($"Pasted character: {resultBuffer[0]}");
-                    }
-                        
+                    CopyMMethod.Paste();
                     break;
-
+                    case "sound":
+                    Sounds.Sound();
+                    break;
+                    case "countdown":
+                    Countdown.Start();
+                    break;
+                    case "calc":
+                    Calculator.Evaluate();
+                    break;
+                    case ".":      
+                    goto case "help"; 
                     default:
                     Console.WriteLine("Please use help");
-
-                    
                     break;
-
-                    case "c":
-                    WorkInProgress();
-                    break;
-                    
-
-                    
                 }
             }
         }
-        public static void WorkInProgress()
-        {
-            Calculator.Evaluate();
-        }
+
     }
 }

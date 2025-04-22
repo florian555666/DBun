@@ -7,8 +7,36 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "DBun/1.0.0": {
+        "dependencies": {
+          "NetCoreAudio": "2.0.0",
+          "System.Windows.Extensions": "9.0.4"
+        },
         "runtime": {
           "DBun.dll": {}
+        }
+      },
+      "NetCoreAudio/2.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/NetCoreAudio.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "System.Windows.Extensions/9.0.4": {
+        "runtime": {
+          "lib/net9.0/System.Windows.Extensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.425.16305"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/System.Windows.Extensions.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.425.16305"
+          }
         }
       }
     }
@@ -18,6 +46,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "NetCoreAudio/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uDZcOG1pHcfxoKr9LrYvh+zHf+3JlL3tWly+o4mICHm5s9INBzcJVWiO2hh17RPyZQ0Fvqiw4qsa396l77JM0Q==",
+      "path": "netcoreaudio/2.0.0",
+      "hashPath": "netcoreaudio.2.0.0.nupkg.sha512"
+    },
+    "System.Windows.Extensions/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LBfgiBxCpJWch0PI7h55FyzlCdSXxBZM2/B/H+v1SBkhux/Da8L3fIP+r7WFwNuTfKiClNfB0Ne3BL12xiCEGw==",
+      "path": "system.windows.extensions/9.0.4",
+      "hashPath": "system.windows.extensions.9.0.4.nupkg.sha512"
     }
   }
 }

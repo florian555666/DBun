@@ -8,11 +8,6 @@ namespace DBun
     {    
         public static double Evaluate()
         {
-
-
-
-        
-
             while(true)
             {
                 double number;
@@ -65,7 +60,6 @@ namespace DBun
                 {
                     System.Console.WriteLine("Not woring");
                 }
-
             return Evaluate();
             } 
         }            

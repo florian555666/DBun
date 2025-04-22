@@ -13,3 +13,8 @@
 /Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.genruntimeconfig.cache
 /Users/florian/DBun/DBun/obj/Debug/net9.0/ref/DBun.dll
 /Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.sourcelink.json
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.csproj.AssemblyReference.cache
+/Users/florian/DBun/DBun/bin/Debug/net9.0/NetCoreAudio.dll
+/Users/florian/DBun/DBun/bin/Debug/net9.0/System.Windows.Extensions.dll
+/Users/florian/DBun/DBun/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Windows.Extensions.dll
+/Users/florian/DBun/DBun/obj/Debug/net9.0/DBun.csproj.Up2Date
