@@ -52,7 +52,7 @@ namespace DBun
 
         }
         */
-        public static void start()
+        public static void Start()
         {
             Console.WriteLine("Bitte geben Sie die Zeit in Sekunden ein:");
             int seconds = Convert.ToInt32(Console.ReadLine());
@@ -86,19 +86,6 @@ namespace DBun
             System.Console.WriteLine("3. Sound 3");
             string input = Console.ReadLine() ?? "";
 
-            bool readkeys = Console.ReadKey(true).Key == ConsoleKey.Escape;
-            System.Console.WriteLine(readkeys);
-            switch (readkeys)
-            {
-                case true:
-                if (readkeys == true)
-                {
-                    Console.WriteLine("Sound Alarm");
-                    await player.Play(AlarmSound);
-                    break;
-                }
-                else
-                {
                 switch (input)
                 {  
                     case "1":
@@ -116,10 +103,10 @@ namespace DBun
                     Console.WriteLine("Ungültige Eingabe");
                     break;
                 }
-                break;
-                }                                                
-            } 
-        }       
+                
+        }                                                
+             
+           
                 /*
             string soundpath = "/Users/florian/DBun/Soundlist/programming-a-computer-loop-323395.mp3";
 

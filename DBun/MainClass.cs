@@ -47,7 +47,8 @@ namespace DBun
             MainClass.run();
 
         }
-        public static void run(){
+        public static void run()
+        {
             string EingabeString;            
             char[] resultBuffer = new char[1];
             bool level = true;
@@ -57,11 +58,14 @@ namespace DBun
                 System.Console.WriteLine("Use . to get back to the main menu.");
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
-                    case "mk":
-                    Textfilemaker.Createfiles();
+                    case "create":
+                    Filemaker.Createfiles();
                     break;
-                    case "makefile":
-                    Textfilemaker.Textfilemake();
+                    case "delete":
+                    Filemaker.Deletefile();
+                    break;
+                    case "Browser":
+                    Textfilemaker.FileBrowser();
                     break;
                     case "DBTest":
                     DataBank.DB(Kategorie);
@@ -101,13 +105,7 @@ namespace DBun
                     Console.WriteLine("Please use help");
                     break;
                     case "test":
-                    Countdown.start();
-                    break;
-                    case "delete":
-                    Textfilemaker.Deletefile();
-                    break;
-                    case "filebrowser":
-                    Textfilemaker.FileBrowser();
+                    Countdown.Start();
                     break;
                     case ".":      
                     goto case "help";  
