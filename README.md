@@ -1,5 +1,8 @@
    First "Full" Console Application Project   
 ----------------------------------------------
+Version Beta 0.2:
+.....
+
 Version Beta 0.1.1:
 Commands Added:
 - makefile (WiP)
