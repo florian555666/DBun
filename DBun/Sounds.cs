@@ -1,8 +1,16 @@
 using NetCoreAudio;
 namespace DBun
 {
+    /// <summary>
+    /// Work in progress
+    /// Solve the problem with the Escape key
+    /// Try to stop the sound with the Escape key
+    /// </summary>
+    /// <returns></returns>
     public class Sounds
-    {        
+    {    
+
+          
         public static bool CancelByEscapeKey()
         {            
             
@@ -16,13 +24,9 @@ namespace DBun
                 else
                 {
                     System.Console.WriteLine("Taste nicht erkannt. Bitte erneut versuchen.");
+                }     
                     return CancelByEscapeKey();
-                }
-            
-            
-                
-        }
-            return CancelByEscapeKey(keyInfo);
+       
         }
         
         public static async void Sound()
@@ -37,11 +41,19 @@ namespace DBun
             System.Console.WriteLine("3. Sound 3 - noch nicht implementiert");
             string input = Console.ReadLine() ?? "";
             switch (input)
-            {
+            {                
                 case "1":
+            if (Sounds.CancelByEscapeKey() == true)
+            {
+                System.Console.WriteLine("Sound gestoppt.");
+                Environment.Exit(0);
+            }
+            else
+            {
+                System.Console.WriteLine("Taste nicht erkannt. Bitte erneut versuchen.");
+            }
                 Console.WriteLine("Sound Alarm");
                 await player.Play("/Users/florian/DBun/Soundlist/programming-a-computer-loop-323395.mp3");
-                return CancelByEscapeKey();                    
                 break;
                 case "2":
                 //CancelByEscapeKey();
@@ -54,6 +66,7 @@ namespace DBun
                 default:
                 Console.WriteLine("Ungültige Eingabe");
                 break;
+            
             }                
         }                                   
     }

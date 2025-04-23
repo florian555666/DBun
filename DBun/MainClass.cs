@@ -18,14 +18,15 @@ using System.Text;
 /// + copy
 /// + paste
 ///Create a DataBank with items
-///
+/// Try to run it with an external Console
+/// For Sounds
 ///summary
 namespace DBun
 {
 
     public class MainClass : DataBank 
     {
-        public static void hello()
+        public static void Hello()
         {
             // Check if a debugger is attached
             if (Debugger.IsAttached)
@@ -45,9 +46,10 @@ namespace DBun
 
         public static void Main(string[] args)
         {
-            //hello();
-            //run();
-            Messages.ExceptionCatcher();
+            //Hello();
+            Run();
+            //Messages.ExceptionCatcher();
+            //MacOS_Terminal.OpenTerm();
         }
         public static void Run()
         {
