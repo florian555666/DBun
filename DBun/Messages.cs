@@ -31,6 +31,9 @@ namespace DBun
             System.Console.WriteLine("Use search + Path to open the file");
             System.Console.WriteLine("Use delete to delete the file + Path");
             System.Console.WriteLine("Use create to create a file + Path");
+            System.Console.WriteLine("Use createfolder to create a folder + Path");
+            System.Console.WriteLine("Use deletefolder to delete a folder + Path");
+            System.Console.WriteLine("Use openfolder to open a folder + Path");
             System.Console.WriteLine("Use help to see the commands");
         }
         public static void Calculator()

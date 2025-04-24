@@ -58,7 +58,7 @@ namespace DBun
                     FileBrowser.OpenFileBrowser();
                     break;
                     case "DBTest":
-                    System.Console.WriteLine("DBTest" + $"{Kategorie} {Name} {Preis}");
+                    System.Console.WriteLine("DBTest");
                     break;
                     case "help":
                     Messages.Help();

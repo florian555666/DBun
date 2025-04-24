@@ -36,7 +36,25 @@ namespace DBun
                     CreateFile(pathnameToCreate);
                     break;
                 case "exit":
-                    MainClass.Run();
+                    MainClass.Program();
+                    break;
+                case "createfolder":
+                    System.Console.WriteLine("Please Enter a Name for the Folder to create");
+                    string FoldernameToCreate = Console.ReadLine() ?? "";
+                    string folderpathToCreate = currentPath + FoldernameToCreate;
+                    CreateFolder(folderpathToCreate);
+                    break;
+                case "deletefolder":
+                    System.Console.WriteLine("Please Enter a Name for the Folder to delete");
+                    string FoldernameToDelete = Console.ReadLine() ?? "";
+                    string folderpathToDelete = currentPath + FoldernameToDelete;
+                    DeleteFolder(folderpathToDelete);
+                    break;
+                case "openfolder":
+                    System.Console.WriteLine("Please Enter a Name for the Folder to open");
+                    string FoldernameToOpen = Console.ReadLine() ?? "";
+                    string folderpathToOpen = currentPath + FoldernameToOpen;
+                    OpenFolder(folderpathToOpen);
                     break;
                 default:
                     System.Console.WriteLine("Invalid command. Please try again.");
@@ -79,5 +97,32 @@ namespace DBun
             }
             System.Console.WriteLine("File created successfully.");
         }
+        public static void OpenFolder(string folderPath)
+        {
+            System.Diagnostics.Process.Start("open", folderPath);
+            System.Console.WriteLine("Folder opened successfully.");
+        }
+        public static void DeleteFolder(string folderPath)
+        {
+            if (System.IO.Directory.Exists(folderPath))
+            {
+                System.IO.Directory.Delete(folderPath, true);
+                System.Console.WriteLine("Folder deleted successfully.");
+            }
+            else
+            {
+                System.Console.WriteLine("Folder not found.");
+            }
+        }
+        public static void CreateFolder(string folderPath)
+        {
+            if (System.IO.Directory.Exists(folderPath))
+            {
+                System.Console.WriteLine("Folder already exists.");
+                return;
+            }
+            System.IO.Directory.CreateDirectory(folderPath);
+            System.Console.WriteLine("Folder created successfully.");
+        }    
     }    
 }
