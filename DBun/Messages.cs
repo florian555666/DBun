@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Dynamic;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
@@ -9,8 +11,6 @@ namespace DBun
         public static void Help()
         {
             System.Console.WriteLine("Commands:");
-            System.Console.WriteLine("create - Create a new file");
-            System.Console.WriteLine("delete - Delete a file");
             System.Console.WriteLine("Browser - Open the file browser");
             System.Console.WriteLine("copy - Copy the first character of a string");
             System.Console.WriteLine("paste - Paste the copied character");
@@ -21,22 +21,44 @@ namespace DBun
             System.Console.WriteLine("help - Show this help message");
             System.Console.WriteLine("exit - Exit the program");
             System.Console.WriteLine("clear - Clear the console");
-            System.Console.WriteLine(". - Go back to the main menu");
         }
+        public static void Browser()
+        {
+            System.Console.WriteLine("This is the file browser");
+            System.Console.WriteLine("Please enter a command:");
+            System.Console.WriteLine("Use .. to open the file browser");
+            System.Console.WriteLine("Use exit to get back to the main menu");
+            System.Console.WriteLine("Use search + Path to open the file");
+            System.Console.WriteLine("Use delete to delete the file + Path");
+            System.Console.WriteLine("Use create to create a file + Path");
+            System.Console.WriteLine("Use help to see the commands");
+        }
+        public static void Calculator()
+        {
+            System.Console.WriteLine("This is the calculator");
+            System.Console.WriteLine("Please enter a command:");
+            System.Console.WriteLine("Use + to add two numbers");
+            System.Console.WriteLine("Use - to subtract two numbers");
+            System.Console.WriteLine("Use * to multiply two numbers");
+            System.Console.WriteLine("Use / to divide two numbers");
+            System.Console.WriteLine("Use exit to get back to the main menu");
+            System.Console.WriteLine("Use help to see the commands");
+        }
+
         public static void ExceptionCatcher()
         {
             // This method is used to catch exceptions and print the error message
             // You can customize the exception handling logic as needed
             // For example, you can log the exception to a file or display a user-friendly message
-            // Here, we simply print the exception message to the console
-        
+            // Here, we simply print the exception message to the console        
             try
             {
-              MainClass.Run();  
+                MainClass.Program();  
+                DebugloggerToFile();
             }
             catch 
             {
-                ExceptionPrinter();
+                ExceptionPrinter();                
             }
         }
         public static void ExceptionPrinter()
@@ -74,6 +96,18 @@ namespace DBun
                     System.Console.WriteLine("Error: File not found.");
                 }
             }
+        }
+        public static void DebugloggerToFile()
+        {
+            string Filename = "/Users/florian/DBun/FileTests/DebugLog.txt";
+            // Create the file if it doesn't exist
+            using (var fileStream = System.IO.File.Create(Filename))
+            {
+                fileStream.Close();
+            }
+            // Write debug message to the file
+            System.IO.File.WriteAllText(Filename, Console.OutputEncoding.ToString());
+            System.Console.WriteLine("Debug log file created successfully.");
         }
     }    
 }

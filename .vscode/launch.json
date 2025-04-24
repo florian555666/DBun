@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: MyProject Debug",
+            "type": "coreclr", // Use 'coreclr' for .NET debugging
+            "request": "launch",
+            "program": "${workspaceFolder}/DBun/bin/Debug/net9.0/DBun.dll", // Path to your compiled DLL
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "externalTerminal" // Launch in an external terminal
+        }
+    ]
+}

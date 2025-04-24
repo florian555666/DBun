@@ -23,56 +23,42 @@ using System.Text;
 ///summary
 namespace DBun
 {
-
     public class MainClass : DataBank 
     {
-        public static void Hello()
+        public static void DebuggerRunner()
         {
             // Check if a debugger is attached
             if (Debugger.IsAttached)
             {
-                Console.WriteLine("Debugger is attached.");
-               
+                Console.WriteLine("Debugger is attached.");               
             }
             else
             {
                 Console.WriteLine("No debugger is attached.");
                 // Optionally, launch a debugger
                 Debugger.Launch(); // This will prompt to attach a debugger if none is attached
-            }
-
-            
+            }   
         }
-
         public static void Main(string[] args)
         {
-            //Hello();
-            Run();
-            //Messages.ExceptionCatcher();
-            //MacOS_Terminal.OpenTerm();
+            Messages.ExceptionCatcher();
+            Messages.DebugloggerToFile();
         }
-        public static void Run()
+        public static void Program()
         {
             string EingabeString;            
             char[] resultBuffer = new char[1];
-            bool level = true;
             Console.WriteLine("Use the command 'help' to see the commands.");
-            while (level == true)
+            while (true)
             {
                 System.Console.WriteLine("Use . to get back to the main menu.");
                 switch (EingabeString = Console.ReadLine() ?? "")
                 {
-                    case "create":
-                    Filemaker.Createfiles();
-                    break;
-                    case "delete":
-                    Filemaker.Deletefile();
-                    break;
                     case "Browser":
-                    Textfilemaker.FileBrowser();
+                    FileBrowser.OpenFileBrowser();
                     break;
                     case "DBTest":
-                    DataBank.DB(Kategorie);
+                    System.Console.WriteLine("DBTest" + $"{Kategorie} {Name} {Preis}");
                     break;
                     case "help":
                     Messages.Help();
@@ -90,12 +76,12 @@ namespace DBun
                     CopyMMethod.Paste();
                     break;
                     case "sound":
-                    Sounds.Sound();
+                    Sound.Run();
                     break;
                     case "countdown":
                     Countdown.Start();
                     break;
-                    case "calc":
+                    case "Calculator":
                     Calculator.Evaluate();
                     break;
                     case ".":      
