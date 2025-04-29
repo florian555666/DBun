@@ -49,6 +49,7 @@ namespace DBun
             string EingabeString;            
             char[] resultBuffer = new char[1];
             Console.WriteLine("Use the command 'help' to see the commands.");
+            System.Console.WriteLine("Developer: Florian Partsch");
             while (true)
             {
                 System.Console.WriteLine("Use . to get back to the main menu.");
@@ -80,9 +81,10 @@ namespace DBun
                     break;
                     case "countdown":
                     Countdown.Start();
+
                     break;
                     case "Calculator":
-                    Calculator.Evaluate();
+                    //Calculator.Evaluate();
                     break;
                     case ".":      
                     goto case "help"; 

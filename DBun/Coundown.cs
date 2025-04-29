@@ -45,12 +45,15 @@ namespace DBun
         }             
         public static void CountdownMethod(int seconds)
         {
+            int i = seconds;
             Console.WriteLine("Countdown");
-            for (int i = seconds; i >= 0; i--)
+            for (i = seconds; i >= 0; i--)
             {
                 Console.WriteLine($"{i} Sekunden verbleibend");
                 System.Threading.Thread.Sleep(1000); // 1 Sekunde warten
             }
+
+            
         }
         public static void TimerMethod(int seconds)
         {

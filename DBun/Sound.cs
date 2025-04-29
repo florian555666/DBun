@@ -22,10 +22,10 @@ namespace DBun
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 if (keyInfo.Key == ConsoleKey.Escape)
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
         public static async void Run()
         {
@@ -55,9 +55,11 @@ namespace DBun
                     break;                                            
                     case "2":
                     Console.WriteLine("Sound 2");
+                    System.Console.WriteLine("Not Valid");
                     break;
                     case "3":
                     Console.WriteLine("Sound 3");
+                    System.Console.WriteLine("Not Valid");
                     break;
                     default:
                     Console.WriteLine("Ungültige Eingabe");

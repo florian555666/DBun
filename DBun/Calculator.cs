@@ -3,8 +3,8 @@ using System.IO.Pipelines;
 using Microsoft.Win32.SafeHandles;
 namespace DBun
 {
-    public class Calculator 
-    {    
+    public class Calculator
+    {
         public static double Evaluate()
         {
             while(true)
@@ -60,7 +60,7 @@ namespace DBun
                     System.Console.WriteLine("Not woring");
                 }
                 return Evaluate();
-            } 
-        }            
-    }    
+        }
+        }
+    }
 }
