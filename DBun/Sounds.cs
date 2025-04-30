@@ -38,11 +38,13 @@ namespace DBun
                 case "1":
                 //CancelByEscapeKey();                    
                 Console.WriteLine("Sound Alarm");
-                await player.Play("/Users/florian/DBun/Soundlist/programming-a-computer-loop-323395.mp3");
+                await player.Play("C:/Users/florian.partsch-1/Documents/VSCode/DBun/DBun/Soundlist/programming-a-computer-loop-323395.mp3");
+                
                 break;
                 case "2":
                 //CancelByEscapeKey();
                 Console.WriteLine("Sound 2");
+                await player.Play("/Users/florian/DBun/Soundlist/0011892.mp3");                
                 break;
                 case "3":
                 //CancelByEscapeKey();

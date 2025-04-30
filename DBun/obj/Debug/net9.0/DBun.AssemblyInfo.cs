@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBun")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bab9e51c8b8e2fec67af10b20e04de43dcab5f2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f51deec4327239f3c5bfed771ed4620a5746874")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBun")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBun")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
