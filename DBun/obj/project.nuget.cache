@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "T/4TLCRBni4=",
+  "dgSpecHash": "V6x2JI+uE7Y=",
   "success": true,
-  "projectFilePath": "/Users/florian/DBun/DBun/DBun.csproj",
+  "projectFilePath": "C:\\Users\\florian.partsch-1\\Documents\\VSCode\\DBun\\DBun\\DBun.csproj",
   "expectedPackageFiles": [
-    "/Users/florian/.nuget/packages/netcoreaudio/2.0.0/netcoreaudio.2.0.0.nupkg.sha512",
-    "/Users/florian/.nuget/packages/system.windows.extensions/9.0.4/system.windows.extensions.9.0.4.nupkg.sha512"
+    "C:\\Users\\florian.partsch-1\\.nuget\\packages\\netcoreaudio\\2.0.0\\netcoreaudio.2.0.0.nupkg.sha512",
+    "C:\\Users\\florian.partsch-1\\.nuget\\packages\\system.windows.extensions\\9.0.4\\system.windows.extensions.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }

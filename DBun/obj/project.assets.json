@@ -80,29 +80,36 @@
     ]
   },
   "packageFolders": {
-    "/Users/florian/.nuget/packages/": {}
+    "C:\\Users\\florian.partsch-1\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/florian/DBun/DBun/DBun.csproj",
+      "projectUniqueName": "C:\\Users\\florian.partsch-1\\Documents\\VSCode\\DBun\\DBun\\DBun.csproj",
       "projectName": "DBun",
-      "projectPath": "/Users/florian/DBun/DBun/DBun.csproj",
-      "packagesPath": "/Users/florian/.nuget/packages/",
-      "outputPath": "/Users/florian/DBun/DBun/obj/",
+      "projectPath": "C:\\Users\\florian.partsch-1\\Documents\\VSCode\\DBun\\DBun\\DBun.csproj",
+      "packagesPath": "C:\\Users\\florian.partsch-1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\florian.partsch-1\\Documents\\VSCode\\DBun\\DBun\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/florian/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\florian.partsch-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
-          "targetAlias": "net6.0-windows",
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -120,7 +127,7 @@
     },
     "frameworks": {
       "net9.0": {
-        "targetAlias": "net6.0-windows",
+        "targetAlias": "net9.0",
         "dependencies": {
           "NetCoreAudio": {
             "target": "Package",
@@ -147,7 +154,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
